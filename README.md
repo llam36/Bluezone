@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# BlueZone💉
+## 🌲Inspiration
+We are incredibly saddened by the fact that misinformation around the Covid-19 vaccines remains prevalent, which has caused many unfortunate and unnecessary deaths from unvaccinated patients, as detailed by the Washington Post. Thus for HackGT8, we want to build something that will help reduce Covid-19 misinformation on social media, thus leading to our idea of BlueZone.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🌲What it does
+Ideally, BlueZone is a dashboard that collects Twitter tweets regarding the Covid-19 vaccine and vaccine-related misinformation in the background and visualizes the prevalence of and vulnerability to Covid-19 vaccine misinformation across the 50 US States. In particular, it will automatically calculate and visualize what particular misinformation topic is currently prevalent for each state and also how vulnerable each state is to misinformation based on their current vaccination rate and vaccine misinformation rate.
 
-## Available Scripts
+## 🌲How we built it
+We performed all Tweet-gathering via the Twitter API and derivation of key metrics using Python (pandas, tweepy, numpy). To collect tweets on Covid-19 vaccine misinformation, we identify common terms that are extremely likely to be associated with vaccine misinformation, on top of generic Covid vaccine search terms. After calculating the score of 4 key metrics for each state, we export this data to a CSV file, which will then be used for visualization using the d3.js library.
 
-In the project directory, you can run:
+## 🌲Challenges we ran into
+One early challenge we found was that not all users self-report their location data (a key criterion for visualization). Furthermore, since user location is self-reported, the location format is highly variable and requires careful parsing to retrieve the state where the user resides (or None if the user resides elsewhere).
 
-### `npm start`
+## 🌲Accomplishments that we're proud of
+We are extremely proud of the fact that we managed to finish extracting data and building 4 interactive visualizations for key metrics regarding COVID vaccine misinformation from the 155000 tweets gathered over a period of 24 hours, which we hope will be useful for public health officials to help strategize their outreach efforts against COVID misinformation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🌲What's next for Bluezone
+We hope to turn Bluezone into a full-fledged web dashboard that can be expanded to other areas of medical misinformation.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🌲Tech Stack
+![D3.js](https://img.shields.io/badge/d3.js-a?style=for-the-badge&logo=d3dotjs&logoColor=white&color=F9A03C)
+![JavaScript](https://img.shields.io/badge/javascript-a?style=for-the-badge&logo=javascript&logoColor=F7DF1E&color=231F40)
+![NLTK](https://img.shields.io/badge/natural%20language%20toolkit-a?style=for-the-badge&logo=python&logoColor=white&color=yellow)
+![Numpy](https://img.shields.io/badge/numpy-a?style=for-the-badge&logo=numpy&logoColor=white&color=013243)
+![Pandas](https://img.shields.io/badge/pandas-a?style=for-the-badge&logo=pandas&logoColor=white&color=darkblue)
+![Python](https://img.shields.io/badge/python-a?style=for-the-badge&logo=python&logoColor=white&color=yellow)
+![React](https://img.shields.io/badge/react-a?style=for-the-badge&logo=react&logoColor=white&color=darkred)
+![Twitter](https://img.shields.io/badge/twitter%20api-a?style=for-the-badge&logo=twitter&logoColor=white&color=blue)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🌲Tool Installation
+![Git](https://img.shields.io/badge/git-a?style=for-the-badge&logo=git&logoColor=white&color=F05032)
+![VSCode](https://img.shields.io/badge/vscode-a?style=for-the-badge&logo=visualstudiocode&logoColor=white&color=007ACC)
